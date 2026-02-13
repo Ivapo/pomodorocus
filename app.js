@@ -19,6 +19,7 @@
   const indicatorIcon = $("timerIndicator").querySelector(".timer-indicator__icon");
   const indicatorLabel = $("timerIndicator").querySelector(".timer-indicator__label");
   const resetBtn = $("resetBtn");
+  const refreshBtn = $("refreshBtn");
   const themeToggle = $("themeToggle");
   const sessionDots = $("sessionDots");
   const settingsToggle = $("settingsToggle");
@@ -293,6 +294,7 @@
   startPauseBtn.addEventListener("click", toggleStartPause);
   timerBtn.addEventListener("click", toggleStartPause);
   resetBtn.addEventListener("click", reset);
+  refreshBtn.addEventListener("click", () => location.reload());
   themeToggle.addEventListener("click", cycleTheme);
   settingsToggle.addEventListener("click", openSettings);
   settingsBackdrop.addEventListener("click", closeSettings);

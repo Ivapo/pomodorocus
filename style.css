@@ -265,6 +265,28 @@ body {
   background: var(--clr-btn-secondary-hover);
 }
 
+/* Refresh Button */
+.refresh-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--clr-btn-secondary-bg);
+  border: none;
+  color: var(--clr-text-muted);
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.refresh-btn:hover {
+  color: var(--clr-text);
+  background: var(--clr-btn-secondary-hover);
+}
+
 /* Theme Toggle */
 .theme-toggle {
   position: absolute;
@@ -422,11 +444,13 @@ body {
 [data-theme="3.1"] .settings-panel__content,
 [data-theme="3.1"] .setting input,
 [data-theme="3.1"] .theme-toggle,
+[data-theme="3.1"] .refresh-btn,
 [data-theme="tui"] .timer-card,
 [data-theme="tui"] .btn,
 [data-theme="tui"] .settings-panel__content,
 [data-theme="tui"] .setting input,
-[data-theme="tui"] .theme-toggle {
+[data-theme="tui"] .theme-toggle,
+[data-theme="tui"] .refresh-btn {
   border-radius: 0;
 }
 
