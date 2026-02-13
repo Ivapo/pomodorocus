@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background fill for maskable safe zone -->
+  <rect width="512" height="512" rx="0" fill="#1a1a2e"/>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#e74c3c"/>
+    </linearGradient>
+  </defs>
+  <!-- Tomato body (smaller for safe zone) -->
+  <ellipse cx="256" cy="288" rx="144" ry="136" fill="url(#g)"/>
+  <!-- Highlight -->
+  <ellipse cx="208" cy="244" rx="36" ry="24" fill="rgba(255,255,255,0.2)" transform="rotate(-20 208 244)"/>
+  <!-- Stem -->
+  <path d="M256 152 C256 152 242 172 242 186 C242 194 248 198 256 198 C264 198 270 194 270 186 C270 172 256 152 256 152Z" fill="#27ae60"/>
+  <!-- Leaf -->
+  <path d="M256 172 C278 142 310 146 310 146 C310 146 304 180 276 186" fill="#2ecc71" stroke="none"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#e74c3c"/>
+    </linearGradient>
+  </defs>
+  <!-- Tomato body -->
+  <ellipse cx="96" cy="108" rx="72" ry="68" fill="url(#g)"/>
+  <!-- Highlight -->
+  <ellipse cx="72" cy="88" rx="18" ry="12" fill="rgba(255,255,255,0.2)" transform="rotate(-20 72 88)"/>
+  <!-- Stem -->
+  <path d="M96 40 C96 40 88 52 88 60 C88 64 92 66 96 66 C100 66 104 64 104 60 C104 52 96 40 96 40Z" fill="#27ae60"/>
+  <!-- Leaf -->
+  <path d="M96 52 C108 36 128 38 128 38 C128 38 124 56 108 60" fill="#2ecc71" stroke="none"/>
+</svg>
