@@ -88,6 +88,7 @@
     running = true;
     startPauseBtn.textContent = "Pause";
     updateIndicator();
+    playStart();
     intervalId = setInterval(tick, 1000);
   }
 
@@ -95,6 +96,7 @@
     running = false;
     startPauseBtn.textContent = "Start";
     updateIndicator();
+    playPause();
     clearInterval(intervalId);
     intervalId = null;
   }
@@ -182,6 +184,26 @@
   }
 
   // --- Sound ---
+  function playClick(freq, duration) {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(freq, ctx.currentTime);
+      gain.gain.setValueAtTime(0.15, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+      osc.start(ctx.currentTime);
+      osc.stop(ctx.currentTime + duration);
+      setTimeout(() => ctx.close(), 500);
+    } catch { /* Web Audio not available */ }
+  }
+
+  function playStart() { playClick(600, 0.08); }
+  function playPause() { playClick(400, 0.08); }
+
   function playBeep() {
     try {
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
